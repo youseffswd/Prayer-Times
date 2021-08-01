@@ -1,0 +1,21 @@
+{
+    "name": "Prayer Times",
+    "description": "that application help you to know exactly when is the nex prayer and prayers times",
+    "version": "1.0.0",
+    "manifest_version": 3,
+
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "16": "mosque16.png",
+        "48": "mosque64.png",
+        "128": "mosque128.png"
+    },
+    "action": {
+        "default_title": "Prayers Time",
+        "default_popup": "popup.html"
+    },
+    "permissions": ["geolocation"],
+    "host_permissions": ["https://api.pray.zone/v2/"]
+}

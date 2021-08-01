@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="popup.css" />
+        <title>Prayers Time</title>
+    </head>
+    <body>
+        <div class="loader">
+            <svg
+                class="spinner"
+                width="65px"
+                height="65px"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle
+                    class="path"
+                    fill="none"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    cx="33"
+                    cy="33"
+                    r="30"
+                ></circle>
+            </svg>
+        </div>
+        <div class="container">
+            <h2 class="main-title">Prayer Times</h2>
+            <div class="info">
+                <div class="date">
+                    <span id="melady"> YYYY-MM-DD </span>
+                    <span class="separate">-</span>
+                    <span id="hegry"> YYYY-MM-DD </span>
+                </div>
+            </div>
+            <div class="prayers" id="prayers"></div>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>

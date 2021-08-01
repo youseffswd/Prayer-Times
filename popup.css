@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 750px;
+    height: 300px;
+    font-family: "Poppins", sans-serif;
+}
+.container {
+    padding: 15px 15px 50px 15px;
+}
+.container .main-title {
+    color: #070600;
+    text-align: center;
+    font-size: 22px;
+}
+.container .main-title::after {
+    content: "";
+    display: block;
+    width: 130px;
+    height: 4px;
+    background-color: #ed6a5e;
+    position: relative;
+    bottom: -2px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.info {
+    margin-top: 30px;
+}
+.info > div {
+    text-align: center;
+}
+.info .date span {
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 1.2px;
+}
+.info .date span.separate {
+    margin: 0 5px;
+}
+
+.prayers {
+    display: flex;
+
+    margin-top: 40px;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+}
+.prayers .item {
+    background-color: #f2f2f2;
+    padding: 15px 0px;
+    border-radius: 10px;
+    flex-grow: 1;
+}
+.prayers .item.active {
+    background-color: #ed6a5e;
+    color: #fff;
+    width: 130px;
+}
+.prayers .item h3 {
+    font-size: 14px;
+    font-weight: bold;
+}
+.prayers .item h2 {
+    display: none;
+}
+.prayers .item p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.prayers .item.active h3 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.prayers .item.active h2 {
+    display: initial;
+}
+.prayers .item.active p {
+    font-size: 16px;
+    font-weight: lighter;
+}
+/* loading */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.loader.loaded {
+    display: none;
+}
+.spinner {
+    animation: rotator 1.4s linear infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+.path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@keyframes colors {
+    0% {
+        stroke: #0f7173;
+    }
+
+    25% {
+        stroke: #ed6a5e;
+    }
+
+    50% {
+        stroke: #070600;
+    }
+
+    75% {
+        stroke: #9191e9;
+    }
+
+    100% {
+        stroke: #e0ca3c;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 187;
+    }
+
+    50% {
+        stroke-dashoffset: 46.75;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        stroke-dashoffset: 187;
+        transform: rotate(450deg);
+    }
+}
